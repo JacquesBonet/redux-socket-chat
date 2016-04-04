@@ -1,0 +1,1 @@
+export const TYPING_TIMER_LENGTH = 2000
