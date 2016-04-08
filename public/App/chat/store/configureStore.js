@@ -10,6 +10,6 @@ export default function configureStore() {
   return createStore(
     reducers,
     { chat: null},
-    applyMiddleware(thunkMiddleware, loggerMiddleware, socketMiddleware)
+    applyMiddleware(loggerMiddleware, socketMiddleware)
   )
 }

@@ -1,5 +1,5 @@
 const USER_NAMES = [
-  'j.bonet', 'p.durand, 'k.smidt', 'a.powel', 's.kristensen'
+  'j.bonet', 'p.durand', 'k.smidt', 'a.powel', 's.kristensen'
 ]
 
 var newCurrent = Math.round( (Math.random() * USER_NAMES.length) % USER_NAMES.length)
