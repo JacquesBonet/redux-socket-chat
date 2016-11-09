@@ -51,4 +51,7 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.7.1"
   }
+  "engines": {
+    "node": "6.9.1"
+  }
 }
