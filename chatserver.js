@@ -24,7 +24,7 @@ if(isDevelopment){
 app.use(express.static(path.join(__dirname, 'public')));
 
 server.listen(80, function(){
-  console.log('listening on *:3000');
+  console.log('listening on *:80');
 });
 
 
