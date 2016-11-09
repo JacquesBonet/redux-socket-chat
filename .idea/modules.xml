@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LectraChat.iml" filepath="$PROJECT_DIR$/LectraChat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/redux-socket-chat.iml" filepath="$PROJECT_DIR$/.idea/redux-socket-chat.iml" />
     </modules>
   </component>
 </project>

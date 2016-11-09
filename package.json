@@ -2,7 +2,7 @@
   "name": "socketweb",
   "version": "1.0.0",
   "description": "web socket",
-  "main": "index.js",
+  "main": "chatserver.js",
   "scripts": {
     "start": "DEBUG=socketweb node chatserver.js",
     "build": "webpack --progress --profile --colors --config webpack.production.config.js",
