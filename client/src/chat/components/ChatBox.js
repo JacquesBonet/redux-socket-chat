@@ -1,6 +1,6 @@
 import React,{Component,PropTypes} from 'react'
 import { findDOMNode } from 'react-dom'
-import styles from "../static/chat.scss"
+import styles from "../static/chat.css"
 import ChatMessages from './ChatMessages'
 import ChatInput from './ChatInput'
 import ChatHeader from './ChatHeader'

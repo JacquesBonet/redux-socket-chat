@@ -95,7 +95,6 @@ Date.prototype.yyyymmddhhmm = function() {
   let now = Date.now();
   let dateTime = this.getMilliseconds();
   if (now - dateTime < 3600000) {
-    let hh = this.getHours() < 10 ? "0" + this.getHours() : this.getHours();
     let min = this.getMinutes() < 10 ? "0" + this.getMinutes() : this.getMinutes();
     return "".concat(min);
   }
@@ -112,25 +111,25 @@ Date.prototype.yyyymmddhhmm = function() {
 };
 
 function LightenDarkenColor(col, amt) {
-  var usePound = false;
+  let usePound = false;
   if (col[0] == "#") {
     col = col.slice(1);
     usePound = true;
   }
-  var num = parseInt(col,16);
-  var r = (num >> 16) + amt;
+  let num = parseInt(col,16);
+  let r = (num >> 16) + amt;
   if (r > 255) {
     r = 255;
   }else if  (r < 0){
     r = 0;
   }
-  var b = ((num >> 8) & 0x00FF) + amt;
+  let b = ((num >> 8) & 0x00FF) + amt;
   if (b > 255) {
     b = 255;
   }else if  (b < 0) {
     b = 0;
   }
-  var g = (num & 0x0000FF) + amt;
+  let g = (num & 0x0000FF) + amt;
   if (g > 255) {
     g = 255;
   }else if (g < 0) {
@@ -139,7 +138,7 @@ function LightenDarkenColor(col, amt) {
   return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
 }
 
-var COLORS = [
+const COLORS = [
   '#E43825', '#A96D1D', '#f8a700', '#f78b00',
   '#5FC919', '#359E00', '#a8f07a', '#4ae8c4',
   '#3b88eb', '#8373DE', '#BF53F9', '#E383EC'
@@ -147,11 +146,11 @@ var COLORS = [
 // Gets the color of a username through our hash function
 function getUsernameColor(username) {
   // Compute hash code
-  var hash = 7
+  let hash = 7
   for (var i = 0; i < username.length; i++) {
     hash = username.charCodeAt(i) + (hash << 5) - hash
   }
   // Calculate color
-  var index = Math.abs(hash % COLORS.length)
+  let index = Math.abs(hash % COLORS.length)
   return COLORS[index]
 }

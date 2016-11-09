@@ -6,25 +6,17 @@ var STOP_TYPING = 'STOP_TYPING';
 var express = require('express');
 var app = express();
 var path = require('path');
-var webpack = require('webpack');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
-var config = require('./webpack.config');
 
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 
-const isDevelopment = (process.env.NODE_ENV !== 'production');
-if(isDevelopment){
-  var compiler = webpack(config)
-  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath,stats:{colors:true} }))
-  app.use(webpackHotMiddleware(compiler))
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
 }
-app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(80, function(){
-  console.log('listening on *:80');
+server.listen(3001, function(){
+  console.log('listening on *:3001');
 });
 
 
