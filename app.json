@@ -1,0 +1,15 @@
+{
+  "name": "redux-socket-chat",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
