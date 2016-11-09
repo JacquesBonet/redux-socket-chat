@@ -6,9 +6,9 @@ In React, Redux, socket.io
 
 # Install
 npm install
+cd client
+npm install
 
 #start
-npm start
+npm run dev
 
-# Launch
-http://localhost:3000/App
