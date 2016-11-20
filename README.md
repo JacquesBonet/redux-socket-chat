@@ -11,4 +11,4 @@ npm install
 npm run dev
 
 # Launch
-http://localhost:3001/App
+http://localhost:3001
