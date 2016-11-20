@@ -8,7 +8,7 @@ In React, Redux, socket.io
 npm install
 
 #start
-npm start
+npm run dev
 
 # Launch
-http://localhost:3000/App
+http://localhost:3001/App
