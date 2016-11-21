@@ -15,8 +15,10 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
 
-server.listen((process.env.PORT || 3001), function(){
-  console.log('listening on *:3001');
+var listen = process.env.PORT || 3001
+
+server.listen(listen, function(){
+  console.log('listening on *:' + listen);
 });
 
 

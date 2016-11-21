@@ -7,8 +7,15 @@ In React, Redux, socket.io
 # Install
 npm install
 
-#start
+#start in dev
 npm run dev
 
-# Launch
-http://localhost:3001
+#start in prod
+PORT=3000 NODE_ENV=production npm run server
+
+http://localhost:3000
+
+#on Heroku
+https://redux-socket-chat.herokuapp.com/
+
+
